@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>clickUrl</key>
+		<string></string>
+		<key>name</key>
+		<string>十秒挑战</string>
+		<key>adImage</key>
+		<string></string>
+		<key>showTime</key>
+		<integer>2</integer>
+	</dict>
+    <dict>
+        <key>clickUrl</key>
+        <string></string>
+        <key>name</key>
+        <string>十秒挑战</string>
+        <key>adImage</key>
+        <string></string>
+        <key>showTime</key>
+        <integer>2</integer>
+    </dict>
+    <dict>
+        <key>clickUrl</key>
+        <string></string>
+        <key>name</key>
+        <string>十秒挑战</string>
+        <key>adImage</key>
+        <string></string>
+        <key>showTime</key>
+        <integer>2</integer>
+    </dict>
+    <dict>
+        <key>clickUrl</key>
+        <string></string>
+        <key>name</key>
+        <string>十秒挑战</string>
+        <key>adImage</key>
+        <string></string>
+        <key>showTime</key>
+        <integer>2</integer>
+    </dict>
+</array>
+</plist>
