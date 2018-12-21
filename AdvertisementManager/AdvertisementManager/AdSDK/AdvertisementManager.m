@@ -37,19 +37,29 @@ static AdvertisementManager *advertisementManager;
 {
     self = [super init];
     if (self) {
-
-        NSInteger index = [[[NSUserDefaults standardUserDefaults] objectForKey:@"AdIndex"] integerValue];
-        _adIndex = index;
-        index ++;
-        [self initAdvertisementData];
-        [[NSUserDefaults standardUserDefaults] setObject:@(index) forKey:@"AdIndex"];
         
-        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-            [self startup];
+        [self initAdvertisementData];
+        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+            if ([self needShowAd]) {
+                [self startup];
+            }
         }];
+        
     }
     return self;
 }
+
+- (BOOL)needShowAd{
+    
+    NSTimeInterval currentTime = [NSDate date].timeIntervalSince1970;
+    NSTimeInterval previousTime = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PreviousTime"] doubleValue];
+    if (currentTime - previousTime > 10) {
+        return YES;
+    }
+    return NO;
+    
+}
+
 - (void)initAdvertisementData{
     self.advertisementDataSource = [NSMutableArray arrayWithCapacity:4];
     NSString *datapath = [[NSBundle mainBundle] pathForResource:@"AdvertisementList" ofType:@"plist"];
@@ -69,6 +79,10 @@ static AdvertisementManager *advertisementManager;
 }
 - (void)startup{  //启动广告
     if ([self.advertisementDataSource count] > 0) {
+        NSInteger index = [[[NSUserDefaults standardUserDefaults] objectForKey:@"AdIndex"] integerValue];
+        _adIndex = index;
+        index ++;
+        [[NSUserDefaults standardUserDefaults] setObject:@(index) forKey:@"AdIndex"];
         AdvertisementModel *advertisementModel =  [self.advertisementDataSource objectAtIndex:_adIndex%[self.advertisementDataSource count]];
         [self.advertisementView setAdvertisementData:advertisementModel];
     } else {
