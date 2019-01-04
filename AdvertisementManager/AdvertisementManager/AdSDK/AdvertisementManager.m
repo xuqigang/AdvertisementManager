@@ -21,7 +21,6 @@ static AdvertisementManager *advertisementManager;
 
 + (void)load{
     [super load];
-    [AdvertisementManager defaultManager];
 }
 
 + (instancetype)defaultManager{
@@ -39,6 +38,13 @@ static AdvertisementManager *advertisementManager;
     if (self) {
         
         [self initAdvertisementData];
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+            if ([self needShowAd]) {
+                [self startup];
+            }
+        }];
+        
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
             if ([self needShowAd]) {
                 [self startup];
@@ -53,7 +59,7 @@ static AdvertisementManager *advertisementManager;
     
     NSTimeInterval currentTime = [NSDate date].timeIntervalSince1970;
     NSTimeInterval previousTime = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PreviousTime"] doubleValue];
-    if (currentTime - previousTime > 10) {
+    if (currentTime - previousTime > 2) {
         return YES;
     }
     return NO;
@@ -80,6 +86,7 @@ static AdvertisementManager *advertisementManager;
 - (void)startup{  //启动广告
     if ([self.advertisementDataSource count] > 0) {
         NSInteger index = [[[NSUserDefaults standardUserDefaults] objectForKey:@"AdIndex"] integerValue];
+        [[NSUserDefaults standardUserDefaults] setObject:@([NSDate date].timeIntervalSince1970) forKey:@"PreviousTime"];
         _adIndex = index;
         index ++;
         [[NSUserDefaults standardUserDefaults] setObject:@(index) forKey:@"AdIndex"];

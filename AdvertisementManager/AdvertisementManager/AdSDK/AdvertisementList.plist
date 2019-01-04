@@ -12,33 +12,43 @@
 		<key>showTime</key>
 		<integer>2</integer>
 	</dict>
+	<dict>
+		<key>clickUrl</key>
+		<string>itms-apps://itunes.apple.com/cn/app/%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%88%87%E5%9B%BE%E5%B7%A5%E5%85%B7/id1413847374?mt=8</string>
+		<key>name</key>
+		<string>九宫格切图工具</string>
+		<key>adImage</key>
+		<string>IMG_0100.JPG</string>
+		<key>showTime</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>clickUrl</key>
+		<string>itms-apps://itunes.apple.com/cn/app/%E5%9B%BE%E6%A0%87%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/id1417167589?mt=8</string>
+		<key>name</key>
+		<string>图标设计工具</string>
+		<key>adImage</key>
+		<string>IMG_0110.JPG</string>
+		<key>showTime</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>clickUrl</key>
+		<string>itms-apps://itunes.apple.com/cn/app/%E6%89%8B%E6%8C%81%E5%BC%B9%E5%B9%95-%E8%B6%85%E7%81%AB%E7%88%86%E7%9A%84%E9%AD%94%E6%80%A7%E5%BC%B9%E5%B9%95%E7%A5%9E%E5%99%A8/id1415311969?mt=8</string>
+		<key>name</key>
+		<string>弹幕神器</string>
+		<key>adImage</key>
+		<string>IMG_0111.JPG</string>
+		<key>showTime</key>
+		<integer>2</integer>
+	</dict>
     <dict>
         <key>clickUrl</key>
-        <string>itms-apps://itunes.apple.com/cn/app/%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%88%87%E5%9B%BE%E5%B7%A5%E5%85%B7/id1413847374?mt=8</string>
+        <string>itms-apps://itunes.apple.com/cn/app/%E6%A1%94%E5%AD%90%E6%97%A5%E8%AE%B0-%E6%82%A8%E7%9A%84%E4%B8%93%E5%B1%9E%E8%AE%B0%E4%BA%8B%E6%9C%AC/id1409534535?mt=8</string>
         <key>name</key>
-        <string>九宫格切图工具</string>
+        <string>桔子日记</string>
         <key>adImage</key>
-        <string>IMG_0100.JPG</string>
-        <key>showTime</key>
-        <integer>2</integer>
-    </dict>
-    <dict>
-        <key>clickUrl</key>
-        <string>itms-apps://itunes.apple.com/cn/app/%E5%9B%BE%E6%A0%87%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/id1417167589?mt=8</string>
-        <key>name</key>
-        <string>图标设计工具</string>
-        <key>adImage</key>
-        <string>IMG_0100.JPG</string>
-        <key>showTime</key>
-        <integer>2</integer>
-    </dict>
-    <dict>
-        <key>clickUrl</key>
-        <string>itms-apps://itunes.apple.com/cn/app/%E6%89%8B%E6%8C%81%E5%BC%B9%E5%B9%95-%E8%B6%85%E7%81%AB%E7%88%86%E7%9A%84%E9%AD%94%E6%80%A7%E5%BC%B9%E5%B9%95%E7%A5%9E%E5%99%A8/id1415311969?mt=8</string>
-        <key>name</key>
-        <string>弹幕神器</string>
-        <key>adImage</key>
-        <string>IMG_0100.JPG</string>
+        <string>IMG_1000.JPG</string>
         <key>showTime</key>
         <integer>2</integer>
     </dict>
